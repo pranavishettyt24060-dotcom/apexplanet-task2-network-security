@@ -1,0 +1,47 @@
+# Task 2 - Network Security & Scanning
+
+## Tools Used
+- Whois
+- Nslookup
+- Google Dorking
+- Nmap
+- Netcat (nc)
+- Wireshark
+- iptables
+
+## Passive Reconnaissance
+- Whois = finds who owns a domain, registration details, expiry date
+- Nslookup = finds IP address of a domain
+- Google Dorking = uses Google search operators to find exposed files
+
+## Google Dorking Commands Used
+- site:gov.in filetype:pdf = finds PDFs on government sites
+- site:gov.in filetype:xls = finds Excel files on government sites
+- intitle:"index of" "parent directory" site:gov.in = finds open directories
+
+## Active Reconnaissance
+- Ping Sweep = checks which devices are alive on network
+- Banner Grabbing = reveals what software a server is running
+
+## Nmap Scans
+- nmap -sS = TCP SYN scan (stealth scan)
+- nmap -sV = service version detection
+- nmap -O = OS detection
+
+## Wireshark Packet Analysis
+- HTTP filter = captures unencrypted web traffic
+- DNS filter = captures domain name lookups
+- ICMP filter = captures ping packets
+
+## Firewall Basics (iptables)
+- iptables -L = list all rules
+- iptables -A INPUT -p tcp --dport 80 -j DROP = block port 80
+- iptables -A INPUT -s [IP] -j DROP = block specific IP
+- iptables -D = delete a rule
+- iptables -F = clear all rules
+
+## Key Concepts Learned
+- Passive recon = gathering info without touching target
+- Active recon = directly interacting with target
+- Ports = doors on a device, each runs a different service
+- Firewall = security guard that blocks/allows tr
